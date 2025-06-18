@@ -170,6 +170,31 @@
 					    </section>
 				    </div>
 				    <div class="col-lg-3">
+					    <section class="resume-section weather-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Weather</h2>
+						    <div id="weather">
+  							<div id="weather-info"></div>
+							<script>
+							  const apiKey = "9414f9107b404c3dad028e95c2cd6c76";
+							  const city = "Cincinnati";
+							  const state = "OH";
+							
+							  fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&state=${state}&country=US&key=${apiKey}`)
+							    .then(response => response.json())
+							    .then(data => {
+							      const weather = data.data[0];
+							      const iconCode = weather.weather.icon;
+							      const iconUrl = `https://www.weatherbit.io/static/img/icons/${iconCode}.png`;
+							
+							      document.getElementById("weather-info").innerHTML = `
+							        <img src="${iconUrl}" alt="${weather.weather.description}" style="vertical-align: middle;">
+							        <span style="font-size: 1.2em;">${weather.temp}°C — ${weather.weather.description}</span>
+							      `;
+							    })
+							</script>
+
+						   </div>
+					    </section>
 					    <section class="resume-section digital-clock-section mb-5">
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Digital Clock</h2>
 						    <div class="resume-section-content">
@@ -322,6 +347,8 @@
     <footer class="footer text-center pt-2 pb-5">
 	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
         <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+	<small class="copyright">JokeAPI developed by <a href="https://sv443.net/jokeapi/v2/">Sven Fehler</a>, I do not claim responsibility.</small>
+	<small class="copyright">I do not claim responsibility for <a href="https://www.weatherbit.io/">Weatherbit API.</a></small>
     </footer>
 
     <script>
