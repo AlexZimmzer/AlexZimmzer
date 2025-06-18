@@ -46,6 +46,7 @@
 </head> 
 
 <body>	
+    <div id="welcome-message" class="mb-3"></div>
 
     <article class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
@@ -323,7 +324,34 @@
         <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
     </footer>
 
-    
+    <script>
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+    }
+
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? decodeURIComponent(match[2]) : null;
+    }
+
+    function displayWelcomeMessage() {
+        const lastVisit = getCookie('lastVisit');
+        const now = new Date().toLocaleString();
+        const messageDiv = document.getElementById('welcome-message');
+
+        if (lastVisit) {
+            messageDiv.textContent = `Welcome back! Your last visit was ${lastVisit}`;
+        } else {
+            messageDiv.textContent = "Welcome to my homepage for the first time!";
+        }
+
+        // Update cookie with current time
+        setCookie('lastVisit', now, 365); // Expires in 1 year
+    }
+
+    document.addEventListener('DOMContentLoaded', displayWelcomeMessage);
+</script>
 
 </body>
 </html> 
