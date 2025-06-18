@@ -26,7 +26,8 @@
     crossorigin="anonymous"></script>
 
     <script>
-	let shown = false;
+	let shownEmail = false;
+	let shownPhone = false;
 
 	function showhideEmail() {
     		const emailDiv = document.getElementById('email');
@@ -39,7 +40,20 @@
     		    span.innerHTML = `<a href='mailto:${email}' class="text-link">${email}</a>`;
     		}
 
-    		shown = !shown;
+    		shownEmail = !shownEmail;
+	}
+	function showhidePhone() {
+    		const phoneDiv = document.getElementById('phone');
+    		const span = phoneDiv.querySelector('span');
+
+    		if (shown) {
+    		    span.textContent = 'Show my phone number';
+    		} else {
+    		    const email = "513-510-7424";
+    		    span.innerHTML = `<a href='tel:${phone}' class="text-link">${phone}</a>`;
+    		}
+
+    		shownPhone = !shownPhone;
 	}
     </script>
 
@@ -65,9 +79,10 @@
   								    <i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i>
   								    <span>Show my email</span>
 								</div>
-							    	<a class="text-link d-flex align-items-center" href="tel:5135107424">
-							            <i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i>513-510-7424
-							    	</a>
+				    				<div id="email" onclick="showhidePhone()" style="cursor: pointer;" class="text-link d-flex align-items-center">
+  								    <i class="far fa-mobile-alt fa-fw me-2" data-fa-transform="grow-3"></i>
+  								    <span>Show my phone number</span>
+								</div>
 							     </div>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-md-6 col-sm-12 text-md-end text-start">
