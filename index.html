@@ -345,11 +345,8 @@
         } else {
             messageDiv.textContent = "Welcome to my homepage for the first time!";
         }
-
-        // Update cookie with current time
-        setCookie('lastVisit', now, 365); // Expires in 1 year
+        setCookie('lastVisit', now);
     }
-
     document.addEventListener('DOMContentLoaded', displayWelcomeMessage);
 </script>
 
