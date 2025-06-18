@@ -1,11 +1,15 @@
-var shown = false;
-function showhideEmail(){
-    if (shown){
-        document.getElementById('email').innerHTML = 'Show my email';
-        shown = false;
+let shown = false;
+
+function showhideEmail() {
+    const emailDiv = document.getElementById('email');
+    const span = emailDiv.querySelector('span');
+
+    if (shown) {
+        span.textContent = 'Show my email';
     } else {
-        var myemail = "<a href='mailto:zimmead" + "@" + "mail.uc.edu'>zimmead" + "@" + "mail.uc.edu</a>";
-        document.getElementById('email').innerHTML = myemail;
-        shown = true;
+        const email = "zimmead" + "@" + "mail.uc.edu";
+        span.innerHTML = `<a href='mailto:${email}' class="text-link">${email}</a>`;
     }
+
+    shown = !shown;
 }
