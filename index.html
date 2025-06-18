@@ -291,12 +291,22 @@
 					    </section><!--//interests-section-->
 					    <section class="resume-section joke-section mb-5">
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Random Joke</h2>
+						    <div id="response" class="mb-3"></div>
 						    <script>
-							    $(document).ready(function() {
+							   function loadJoke() {
 							        $.get("https://v2.jokeapi.dev/joke/Any", function(result) {
-							            $("#response").html(result.joke);
+							            if (result.type === "single") {
+							                $("#response").html(result.joke);
+							            } else { //if there is a joke that isn't one line
+							                $("#response").html(`<strong>${result.setup}</strong><br>${result.delivery}`);
+							            }
 							        });
-							      });
+							    }
+							
+							    $(document).ready(function() {
+							        loadJoke();
+							        setInterval(loadJoke, 60000);//update every 60 seconds
+							    });
 						    </script>
 					    </section>
 				    </div>
