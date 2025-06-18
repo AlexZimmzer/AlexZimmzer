@@ -298,7 +298,7 @@
 							            if (result.type === "single") {
 							                $("#response").html(result.joke);
 							            } else { //if there is a joke that isn't one line
-							                $("#response").html(`<strong>${result.setup}</strong><br>${result.delivery}`);
+							                $("#response").html(`${result.setup}<strong><br>${result.delivery}</strong>`);
 							            }
 							        });
 							    }
