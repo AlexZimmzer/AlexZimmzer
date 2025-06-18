@@ -289,7 +289,16 @@
 							    </ul>
 						    </div>
 					    </section><!--//interests-section-->
-					    
+					    <section class="resume-section joke-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Random Joke</h2>
+						    <script>
+							    $(document).ready(function() {
+							        $.get("https://v2.jokeapi.dev/joke/Any", function(result) {
+							            $("#response").html(result.joke);
+							        });
+							      });
+						    </script>
+					    </section>
 				    </div>
 			    </div><!--//row-->
 		    </div><!--//resume-body-->
