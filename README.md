@@ -12,39 +12,24 @@
 
 ![Alex's headshot](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab0/images/headshot.png)
 
-## Lab 1
+## Individual Project 1
 
 ## Overview
-In this lab, I worked with basic HTML, JavaScript, Ajax, CSS, jQuery, and Web API integration to create a simple information page with multiple exercises related to these languages. This helped me gain a further understanding of both front-end and back-end web development, and introduced me to asynchronous programming with Ajax.
+In this project, I used what I learned from Lab 2 and lectures to create a professional profile website deployed using GitHub's cloud service.
 
-Lab URL: [https://github.com/AlexZimmzer/waph-zimmead/tree/main/labs/lab2](https://github.com/AlexZimmzer/waph-zimmead/tree/main/labs/lab2)
+Porject URL: [https://alexzimmzer.github.io/index.html](https://alexzimmzer.github.io/index.html)
 
-## Task 1: Basic HTML with forms, JavaScript
+## Page Information
 
-In this task, I created an HTML webpage following a provided template with my headshot and an nteractable form.
+For this task, I created two pages; index.html and waph.html. The first page is the profile page that contains my information, a bio, work experience, and skills. The latter page contains information about the course, including labs and hackathons. 
 
-![waph-zimmead.html](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/waph-zimmead-html.png)
+## CSS/Bootstrap
 
-I enhanced this page using JavaScript to include multiple different sub-tasks, including an inline JS code that displays the current date and time when clicked, a code that displays both a digital clock ad analog clock, and code that shows and hides my email when clicked on.
+For this task, I utilized a free Bootstrap template to organize my website, found on [3rd Wave Media](https://themes.3rdwavemedia.com/). I copied the template index.html file and replaced the information with my own, changing the CSS reference to be the local GitHub repository. This template utilized FontAwesome icons for various parts of the page, including the LinkedIn/Github icons, and the icons next to the email and phone numbers. I also included a page tracker using [Flag Counter](https://flagcounter.com/) to count the amount of vistors the site recieves. I did this by creating a separate section below my work experience that included the tag provided on the page.
 
-![Simple HTML and JS](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/simpleHTMLJS.png)
+## Technical Information
 
-## Task 2: Ajax, CSS, jQuery, and Web API integration
-
-I continued to enhance this site with Ajax; a tool that uses JavaScript to send HTTP Requests at any time. This allows the page to be modified without a reload, invoked by a callback function. I displayed this by creating an Ajax request form that used the echo.php application from Lab 1 to send an Ajax GET request and display the response below. 
-
-![Ajax Request in console](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/testAjax.png)
-
-I also used CSS to style the page using inline, internal, and external styling. This was done using a remote CSS program, a simple internal styling code in the head tag, and inline code to modify the styling of the Ajax request button.
-
-![CSS Styling](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/cssStyling.png)
-
-I also used jQuery, a JavaScript library that uses simple APIs to accomplish difficult tasks with less code. To do this, I had to add the library to my page using code provided in the lecture slides. I also created two different Ajax request options, Ajax GET and Ajax POST, designed to collect data from the server and modifying data on the server respectively. The console views of these requests with their request methods are seen below.
-
-![Ajax GET Request](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/ajaxGet.png)
-
-![Ajax POST Request](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/ajaxPost.png)
-
-I also added a code that would send a request to display a random joke from a joke API as the page is loaded in the jQuery Ajax.
-
-![Joke API Integration](https://github.com/AlexZimmzer/waph-zimmead/blob/main/labs/lab2/images/joke.png)
+I also utilized jQuery when building this site by adding the tools from Lab 2 such as the digital/analog clock. I also added the function to show and hide my email in the header. I had to change the formatting of it compared to the use in Lab 2 as it was formatted this time using CSS in order for it to appear properly.
+Additionally, I created a section in the sidebar that used the JokeAPI from Lab 2, allowing it to display any joke from any category and refreshes every minute.
+I also used the [Weatherbit API](https://www.weatherbit.io/) to display the current weather in Cincinnati, OH on the sidebar. The API also has a tool to display an icon associated with the weather, which gets displayed. 
+The website also contains a cookie tracker at the top of the page, that displays a message depending on if it is your first visit or if you have visited before, showing the last visit time.
