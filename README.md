@@ -18,6 +18,7 @@
 In this project, I used what I learned from Lab 2 and lectures to create a professional profile website deployed using GitHub's cloud service.
 
 Porject URL: [https://alexzimmzer.github.io/index.html](https://alexzimmzer.github.io/index.html)
+Project Repository: [https://github.com/AlexZimmzer/AlexZimmzer.github.io/tree/main](https://github.com/AlexZimmzer/AlexZimmzer.github.io/tree/main)
 
 ## Page Information
 
